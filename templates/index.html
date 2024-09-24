@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Maze</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Text Maze</h1>
+    <pre style="text-align: center;">
+    {% for row in maze %} {{ row|join(' ') }}
+    {% endfor %}
+    </pre>
+
+    <form method="post" action="/move" style="text-align: center;">
+        <div>
+            <button name="direction" value="up">  up  </button>
+        </div>
+        <div>
+            <button name="direction" value="left"> left </button>
+            <button name="direction" value="right">right</button>
+        </div>
+        <div>
+            <button name="direction" value="down">down</button>
+        </div>
+    </form>
+</body>
+</html>
